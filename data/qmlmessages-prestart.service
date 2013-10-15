@@ -1,0 +1,8 @@
+[Unit]
+Description=qmlmessages prestart
+After=xorg.target
+Requires=dbus.socket xorg.target booster-qtcomponents.service
+
+[Service]
+ExecStart=/usr/bin/invoker --type=qtcomponents /usr/bin/qmlmessages -prestart
+
